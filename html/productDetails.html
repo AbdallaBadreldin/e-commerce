@@ -43,18 +43,33 @@ function fetchData() {
     .then((data) => {
         let productImg = document.getElementById("image");
         productImg.src = data.images[0];
-      });
-    
-}
 
-       }
+        let title = document.getElementById("title");
+        title.innerHTML = data.title
+
+        let desc = document.getElementById("description");
+        desc.innerHTML = data.description
+
+        
+        let price = document.getElementById("price");
+        price.innerHTML = data.price
+      });
+}}
     </script>
 
 <div class="container">
     <div class="product_image"> <img id="image"/></div>
    
     <div class="product_info">
-        <p>fdsfds</p>
+        <p>New!</p>
+        <p id="title"> Cotton sweat shirt</p>
+        <p id="price"> $ 1.299</p>
+        <p id="brand"> H $ M</p>
+        <p id="description"> adfgdag</p>
+        <p id="stock"> 5</p>
+
+        <p id="Size"> XL </p>
+        <button id="add"> H $ M</button>
     </div>
 </div>
 
