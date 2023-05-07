@@ -1,6 +1,6 @@
 fetchData();
 function fetchData() {
-  let output = document.getElementById("products_list");
+  let output = document.getElementsByClassName("products_list");
   fetch("https://dummyjson.com/products")
     .then((res) => res.json())
     .then((data) => {
@@ -10,7 +10,16 @@ function fetchData() {
       // output.innerHTML += "price = " + data.price + "<br/>";
       // output.innerHTML += "rating = " + data.rating + "<br/>";
       // output.innerHTML += "stock = " + data.stock + "<br/>";
-      console.log(data);
-    }
-    );
+      data.products.forEach((currentElement) => {
+        var mainDiv  =document.createElement('div')
+        var divText = document.createElement('div')
+        var divParagrapgh = document.createElement('p')
+        var img = document.createElement('img');
+        img.src = currentElement.images[0] ;
+        mainDiv.innerHTML=img + divText +divParagrapgh
+        let output = document.getElementById("products_list");
+       output.appendChild(img)
+      });
+    
+    });
 }
