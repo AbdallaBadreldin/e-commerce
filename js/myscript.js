@@ -7,6 +7,7 @@ function fetchData() {
        data.products.length=6;
    
         data.products.forEach((currentElement) => {
+          
         let mainDiv  =document.createElement('div');
         let divText = document.createElement('div');
         let productName = document.createElement('p');
@@ -15,6 +16,11 @@ function fetchData() {
         price.className = "price";
         let divParagrapgh = document.createElement('p')
         let img = document.createElement('img');
+
+        mainDiv.addEventListener("click", function() {
+          document.location.href='../html/productDetails.html';
+          localStorage.setItem("productId", currentElement.id);
+      })
 
         productName.innerText = currentElement.title;
         price.innerText = currentElement.price;
@@ -30,7 +36,7 @@ function fetchData() {
     
         let output = document.getElementById("products_list");
        output.appendChild(mainDiv);
-       
+
       });
     
     });
