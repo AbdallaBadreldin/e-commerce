@@ -4,15 +4,8 @@ function fetchData() {
   fetch("https://dummyjson.com/products")
     .then((res) => res.json())
     .then((data) => {
-      // output.innerHTML += "id = " + data.id + "<br/>";
-      // output.innerHTML += "brand = " + data.brand + "<br/>";
-      // output.innerHTML += "category = " + data.category + "<br/>";
-      // output.innerHTML += "price = " + data.price + "<br/>";
-      // output.innerHTML += "rating = " + data.rating + "<br/>";
-      // output.innerHTML += "stock = " + data.stock + "<br/>";
        data.products.length=6;
-      //  var first6 = data.products.slice(0, 6);
-      //  first6.forEach((currentElement) => {
+   
         data.products.forEach((currentElement) => {
         let mainDiv  =document.createElement('div');
         let divText = document.createElement('div');
@@ -37,9 +30,7 @@ function fetchData() {
     
         let output = document.getElementById("products_list");
        output.appendChild(mainDiv);
-
-    
-     
+       
       });
     
     });
