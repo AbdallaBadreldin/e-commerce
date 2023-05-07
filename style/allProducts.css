@@ -3,12 +3,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
-    margin-right: 10px;
-    margin-left: 10px;
+
   }
   .products_list > div {
-    width: 29%;
+    width: 33%;
     text-align: center;
-    padding: 20px 0;
+  }
+
+  .products_list > img {
+    width: 30%;
+    height: 3%;
   }
