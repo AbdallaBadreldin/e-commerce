@@ -11,14 +11,15 @@
 .products_list>div {
   width: 29%;
   text-align: center;
-  margin: 20px;
+  margin: 10px;
   height: auto;
   text-align: center;
 }
 
 .products_list>div>img {
-  object-fit: contain;
-  width: 50%;
+  border-radius: 10%;
+  object-fit: cover;
+  width: 90%;
   height: 250px;
 }
 
@@ -49,7 +50,7 @@
 }
 
 .products_word {
-  margin: 25px;
+  margin: 50px;
   align-self: center;
   align-content: center;
   align-items: center;
