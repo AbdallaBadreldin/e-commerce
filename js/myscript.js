@@ -27,6 +27,7 @@ function fetchData() {
 
         divParagrapgh.innerText = currentElement.description;
         img.src = currentElement.images[0] ;
+        img.style.objectFit = 'cover';
         divText.appendChild(productName);
         divText.appendChild(price);
 

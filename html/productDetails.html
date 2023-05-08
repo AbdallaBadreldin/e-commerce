@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../js/ProductDetails.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/ProductDetails.css" />
     <title>Document</title>
     <style>
 .container {
@@ -29,41 +31,7 @@
     </div>
   </header>
 <body>
-    <script>
-       let id = localStorage.getItem("productId");
-       if(id ==null){
-        alert('please pick up a product');
-       }
-       else{
-        fetchData();
-function fetchData() {
-  let output = document.getElementsByClassName("container");
-  fetch('https://dummyjson.com/products/'+id)
-    .then((res) => res.json())
-    .then((data) => {
-        let productImg = document.getElementById("image");
-        productImg.src = data.images[0];
-
-        let title = document.getElementById("title");
-        title.innerHTML = data.title
-
-        let desc = document.getElementById("description");
-        desc.innerHTML = data.description
-
-        let price = document.getElementById("price");
-        price.innerHTML = data.price
-
-        let brand = document.getElementById("brand");
-        brand.innerHTML = data.brand
-
-        let stock = document.getElementById("stock");
-        stock.innerHTML = data.stock
-
-        // let stock = document.getElementById("stock");
-        // stock.innerHTML = data.stock
-      });
-}}
-    </script>
+   
 
 <div class="container">
     <div class="product_image"> <img id="image"/></div>
@@ -71,12 +39,22 @@ function fetchData() {
     <div class="product_info">
         <p>New!</p>
         <p id="title"> Cotton sweat shirt</p>
+        <br>
         <p id="price"> $ 1.299</p>
+        <br>
         <p id="brand"> H $ M</p>
+        <br>
+        <br>
         <p id="description"> adfgdag</p>
+        <br>
         <p id="stock"> 5</p>
-
-        <p id="size"> XL </p>
+        <br>
+        <br>
+        <br>
+        <p id="size_title"> Size </p>
+        <br>
+        <p id="size"> XS </p>
+        <br>
         <button id="add">Add To Cart</button>
     </div>
 </div>
