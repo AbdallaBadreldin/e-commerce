@@ -50,9 +50,17 @@ function fetchData() {
         let desc = document.getElementById("description");
         desc.innerHTML = data.description
 
-        
         let price = document.getElementById("price");
         price.innerHTML = data.price
+
+        let brand = document.getElementById("brand");
+        brand.innerHTML = data.brand
+
+        let stock = document.getElementById("stock");
+        stock.innerHTML = data.stock
+
+        // let stock = document.getElementById("stock");
+        // stock.innerHTML = data.stock
       });
 }}
     </script>
@@ -68,8 +76,8 @@ function fetchData() {
         <p id="description"> adfgdag</p>
         <p id="stock"> 5</p>
 
-        <p id="Size"> XL </p>
-        <button id="add"> H $ M</button>
+        <p id="size"> XL </p>
+        <button id="add">Add To Cart</button>
     </div>
 </div>
 
