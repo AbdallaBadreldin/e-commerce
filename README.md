@@ -1,2 +1,2 @@
-# DPE Project
+# DPE graduation Project e-commerce App
  
